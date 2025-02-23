@@ -55,6 +55,7 @@ define Build/Compile
 	mkdir $(PKG_BUILD_DIR)/wt86047
 	mcopy -i $(PKG_BUILD_DIR)/wt86047-modem.bin -p -m -v \
 		::image/mba.mbn ::image/modem.* ::image/wcnss.* $(PKG_BUILD_DIR)/wt86047
+	mkdir $(PKG_BUILD_DIR)/openstick-mf601sl
 	mcopy -i $(PKG_BUILD_DIR)/openstick-mf601sl-modem.bin -p -m -v \
 		::image/mba.mbn ::image/modem.* ::image/wcnss.* $(PKG_BUILD_DIR)/openstick-mf601sl
 endef
