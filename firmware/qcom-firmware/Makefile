@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qcom-firmware
 PKG_VERSION:=r1034.2.1
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/sunny-chao/qcom-firmware.git
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_SOURCE_VERSION:=3b5c5d5adbcfaf0f48b0be5c025f096b30fc87fd
+PKG_SOURCE_VERSION:=4cdfa311f0fcf835406b96cec56c899b98cd35fe
 PKG_MIRROR_HASH:=06141164569672af65cfc06f760729c6f566b43ed638f110028e7a3635a62565
 
 PKG_MAINTAINER:=Handsomeyingyan <handsomeyingyan@gmail.com>
