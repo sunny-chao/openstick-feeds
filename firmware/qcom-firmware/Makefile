@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qcom-firmware
-PKG_VERSION:=r1034.2.1
+PKG_VERSION:=r1034.2.2
 PKG_RELEASE:=4
 
 PKG_SOURCE_PROTO:=git
@@ -65,24 +65,24 @@ define Package/modem-install
 endef
 
 define Package/compile
-	mkdir $(PKG_BUILD_DIR)/$(1)
-	mcopy -i $(PKG_BUILD_DIR)/$(1)-modem.bin -p -m -v \
-		::image/mba.mbn ::image/modem.* ::image/wcnss.* $(PKG_BUILD_DIR)/$(1)
+	mkdir $(1)/$(2)
+	mcopy -i $(1)/$(2)-modem.bin -p -m -v \
+		::image/mba.mbn ::image/modem.* ::image/wcnss.* $(1)/$(2)
 endef
 
 define Build/Compile
-	$(call Package/compile,dragonboard)		
-	$(call Package/compile,openstick-ufi001b)
-	$(call Package/compile,openstick-ufi001c)
-	$(call Package/compile,openstick-ufi003)
-	$(call Package/compile,openstick-ufi103s)
-	$(call Package/compile,openstick-sp970)
-	$(call Package/compile,openstick-uz801)
-	$(call Package/compile,wt88047)
-	$(call Package/compile,wt86047)
-	$(call Package/compile,openstick-mf32)
-	$(call Package/compile,openstick-mf601)
-	$(call Package/compile,openstick-mf601s)
+	$(call Package/compile,$(PKG_BUILD_DIR),dragonboard)		
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-ufi001b)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-ufi001c)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-ufi003)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-ufi103s)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-sp970)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-uz801)
+	$(call Package/compile,$(PKG_BUILD_DIR),wt88047)
+	$(call Package/compile,$(PKG_BUILD_DIR),wt86047)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-mf32)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-mf601)
+	$(call Package/compile,$(PKG_BUILD_DIR),openstick-mf601s)
 endef
 
 #======================================================================
