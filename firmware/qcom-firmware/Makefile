@@ -14,7 +14,7 @@ PKG_RELEASE:=4
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/sunny-chao/qcom-firmware.git
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_SOURCE_VERSION:=a0d68b9f78c776d2aabd39f0d47c8a0661e9d224
+PKG_SOURCE_VERSION:=decfb6ac2716fd8b88e861cde0b2187edef2db18
 PKG_MIRROR_HASH:=skip
 
 PKG_MAINTAINER:=sunnychao <sunnychao816@gmail.com>
