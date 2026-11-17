@@ -28,7 +28,7 @@ define Package/android-tools/default
   CATEGORY:=Utilities
   TITLE:=Android Debug Tools
   URL:=http://tools.android.com/
-  DEPENDS:=+zlib +libopenssl +libpthread +kmod-usb-gadget-functionfs
+  DEPENDS:=+zlib +libopenssl +libpthread +kmod-usb-gadget-fs
 endef
 
 define Package/$(PKG_NAME)/Default/description
